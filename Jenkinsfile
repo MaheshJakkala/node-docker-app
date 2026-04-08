@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh '''
                 docker build -t node-docker-app:${BUILD_NUMBER} .
-                docker tag node-docker-app:${BUILD_NUMBER} laxmi916/node-docker-app:${BUILD_NUMBER}
+                docker tag node-docker-app:${BUILD_NUMBER} maheshjakkala/node-docker-app:${BUILD_NUMBER}
                 '''
             }
         }
