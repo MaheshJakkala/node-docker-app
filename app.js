@@ -6,7 +6,8 @@ const app = express();
 // Root route
 app.get('/', (req, res) => {
   const sum = add(2, 3);
-  res.send(`Sum is: ${sum}`);
+  const product = 2 * 3 ;
+  res.send(`product is: ${product}`);
 });
 
 // App listens on port 8080
