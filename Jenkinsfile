@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout from GitHub') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/laxmi916/node-docker-app.git'
+                    url: 'https://github.com/MaheshJakkala/node-docker-app.git'
             }
         }
 
@@ -27,13 +27,13 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                sh 'docker push laxmi916/node-docker-app:${BUILD_NUMBER}'
+                sh 'docker push maheshjakkala/node-docker-app:${BUILD_NUMBER}'
             }
         }
         
         stage('Create container') {
             steps {
-                sh 'docker run -d -p 3000:8080 laxmi916/node-docker-app:${BUILD_NUMBER}'
+                sh 'docker run -d -p 3000:8080 maheshjakkala/node-docker-app:${BUILD_NUMBER}'
             }
         }
 
