@@ -37,6 +37,18 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                sh 'echo "Testing Completed"'
+            }
+        }
+
+         stage('Deployment') {
+            steps {
+                sh 'echo "Successfully Deployed"'
+            }
+        }
+
 
 
     }
